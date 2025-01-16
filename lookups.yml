@@ -1,0 +1,8 @@
+-
+  name: Test Connectivity
+  hosts: webserver1 
+  vars:
+      ansible_soh_pass: "{{lookup('svfile', 'webserver1 file=credentials.esv delimiter=, ')}} "
+  tasks:
+  - name: create a dummy file on webserver 
+    command: touch / tmp/csv_lookups.txt

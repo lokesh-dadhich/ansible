@@ -1,0 +1,15 @@
+webserver1 ansible_host=192.168.25.15 ansible_ssh_pass=password ansible_connection=ssh ansible_port=22 ansible_user=root 
+sqlserver1 ansible_host=192.168.25.16ansible_ssh_pass=password ansible_connection=ssh ansible_port=22 ansible_user=root
+windows ansible_host=192.168.25.12.ansible_password=password ansible_connection=winrm ansible_port=5986 ansible_user=Gaura v ansible_ winrm_server_cert validation=ignore
+
+
+[webservers]
+ webserver1
+
+[databaseservers]
+sqlserver1
+
+
+[web_database_servers]
+webserver1
+sqlserver1

@@ -1,0 +1,38 @@
+-
+    name: this is our first play.
+    hosts: server1
+    vars:
+      your_name: lokesh
+      dummy_list:
+        - 1
+        - 10
+        - 20
+        - 30
+        - 10
+      dummy_list2: 
+        - 30
+        - 40
+        - 10
+        - 50
+    tasks:
+      -
+        debug:
+          msg: "hello {{ your_name | upper }}" #upper is all capital letter
+      -
+        debug:
+          msg: "hello {{ your_name | replace ('lokesh' , 'kishan') }}"
+      -
+        debug:
+          msg: "{{ dummy_list | min }}"
+      -
+        debug:
+          msg: "{{ dummy_list | unique }}"
+      -
+        debug:
+          msg: "{{ dummy_list | union(dummy_list2) }}"
+      -
+        debug:
+          msg: "{{ 100 | rendom }}"
+      -
+        debug:
+          msg: "{{ '/etc/ansible/ansible.cfg' | basename }}"

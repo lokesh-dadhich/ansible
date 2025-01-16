@@ -1,0 +1,12 @@
+- 
+    name: "this is our first play."
+    hosts: server1 , server2
+    strategy: free
+    tasks: 
+      - 
+          name: "task 1"
+          command: name='apache2' state='present'
+
+
+          name: "task 2"
+          command: touch /tmp/ansible.dummy.txt

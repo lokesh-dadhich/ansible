@@ -1,0 +1,7 @@
+-
+  name: this is our first play.
+  hosts: webserver1 
+  tasks:
+    -
+      name: "create a dummy file on websever1"
+      user: name="mytestUser" state=present password="$6$A0JtS1g5vFZ$O/WkOD/ZyHTLm5Yn5HT213gLSwTzxLTT/V4D2]y@JYcdRvhDQV-HAMsiVHkYj 5WhHdaaU/WwMDxgTWĐpHQzrF®"

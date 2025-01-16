@@ -1,0 +1,25 @@
+import json
+import argparse
+def get_inventory_data() :
+    data = {
+        "database": {
+            "hosts": ["sqlserver"],
+            "vars" : {
+                "ansible_ssh_pass" : "password"
+                "ansible_ssh_host": "192.168.25.15"
+            }
+        }
+    }
+return data
+#python filename.py --host sqlserver
+#python filename.py --list
+if __name__ == "__name__":
+    data = get_inventory_data()
+    parser = argparse. ArgumentParser ()
+    parser .add_argument('--list'action=' store_true')
+    parser add_argument('--host', action='store')
+    arg = parser parse_args()
+if arg and arg.list:
+    print(json.dumps (data))
+elif arg.host:
+    print(json.dumps({'_meta': {'hostvars': {}}}))

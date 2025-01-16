@@ -1,0 +1,9 @@
+-
+  name: this is our first play.
+  hosts: webserver1 
+  vars:
+    servicename: pache2
+  tasks: 
+    -
+      name: 'creating file using variable'
+      service: name={{ servicename }) state=started

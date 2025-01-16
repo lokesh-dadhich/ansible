@@ -1,0 +1,23 @@
+- 
+    name: "this is our first play."
+    hosts: server1
+    tasks: 
+      - 
+          -   name: "create a dummy directory in server1"
+          command: mkdir /tmp/ansible_dummy2
+
+
+          name: "create a dummy file on sansible_dummy2"
+          command: touch /tmp/ansible.dummy.txt
+
+- 
+    name: "this is our second play."
+    hosts: databashserver
+    tasks: 
+      - 
+           name: "creating a directory in tmp folder"
+           command: mkdir /tmp/mysecondplaydir
+
+           name: "create a file in databashserver and server1"
+           command: mkdir /tmp/mysecondplaydir/secondplay.txt
+           

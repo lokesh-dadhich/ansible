@@ -1,0 +1,24 @@
+-
+    name: "this is our first play."
+    hosts: server1
+    vars: 
+      age: 18
+    tasks: 
+      - 
+          -   name: "create a dummy directory in server1"
+              command: mkdir /tmp/18_age
+              when: age == 18
+          -
+              name: "create a dummy directory in server1"
+              command: mkdir /tmp/graterthan_18
+              when: age > 18
+
+          -
+              name: "create a dummy directory in server1"
+              command: mkdir /tmp/lessthan_18
+              when: age > 18 and age < 25
+
+          -
+              name: "create a dummy directory in server1"
+              command: mkdir /tmp/lessthan_18
+              when: age == 18 or age == 25
